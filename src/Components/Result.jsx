@@ -10,6 +10,7 @@ const Result = () => {
     toast.success("There is your answer", {
       position: toast.POSITION.BOTTOM_CENTER,
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const goBackHandler = () => {
