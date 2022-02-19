@@ -35,7 +35,10 @@ const Initial = () => {
         className="form-control"
       />
       {showButton && (
-        <button onClick={nextHandler} className="btn">
+        <button
+          onClick={nextHandler}
+          className="btn animate__animated animate__fadeIn"
+        >
           Next
         </button>
       )}
