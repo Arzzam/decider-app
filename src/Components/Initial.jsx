@@ -6,7 +6,7 @@ const Initial = () => {
   const context = useContext(MyContext);
   const textInput = useRef();
   const [showButton, setShowButton] = useState(false);
-  const [showError, setShowError] = useState(false);
+//   const [showError, setShowError] = useState(false);
 
   const changeHandler = () => {
     if (textInput.current.value.length >= 5) setShowButton(true);
