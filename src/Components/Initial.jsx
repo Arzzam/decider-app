@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+import { MyContext } from "../Context";
 
 const Initial = () => {
+  const context = useContext(MyContext);
   const textInput = useRef();
   const [showButton, setShowButton] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -10,7 +12,7 @@ const Initial = () => {
     else setShowButton(false);
   };
 
-  const decideHandler = () => {
+  const nextHandler = () => {
     const value = textInput.current.value;
 
     if (value.length >= 40) {
@@ -18,6 +20,8 @@ const Initial = () => {
     } else {
       setShowError(false);
     }
+    context.goTo(1);
+    context.question(value);
   };
 
   return (
@@ -31,8 +35,8 @@ const Initial = () => {
         className="form-control"
       />
       {showButton && (
-        <button onClick={decideHandler} className="btn">
-          Decide
+        <button onClick={nextHandler} className="btn">
+          Next
         </button>
       )}
 
