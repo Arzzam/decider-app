@@ -1,11 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import { MyContext } from "../Context";
+import { toast } from "react-toastify";
 
 const Result = () => {
   const context = useContext(MyContext);
 
   useEffect(() => {
     context.result();
+    toast.success("There is your answer", {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
   }, []);
 
   const goBackHandler = () => {
