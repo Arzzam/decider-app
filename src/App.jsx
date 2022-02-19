@@ -9,6 +9,7 @@ import Initial from "./Components/Initial";
 import Result from "./Components/Result";
 import { MyContext } from "./Context";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Footer/Footer";
 
 const App = () => {
   const context = useContext(MyContext);
@@ -30,6 +31,7 @@ const App = () => {
         </SwitchTransition>
       </div>
       <ToastContainer />
+      <Footer />
     </div>
   );
 };
